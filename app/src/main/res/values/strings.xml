@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">MADU JARVIS AI</string>
+    <string name="tagline">Your Voice. Your Phone. Your AI.</string>
+    <string name="listening">Listening…</string>
+    <string name="tap_to_speak">Tap to Speak</string>
+    <string name="push_to_talk">Hold to Talk</string>
+    <string name="speak_now">Speak now, Jarvis is listening…</string>
+    <string name="sinhala">සිංහල</string>
+    <string name="english">English</string>
+    <string name="mixed">සිංහල + English</string>
+    <string name="channel_name">Jarvis Voice Assistant</string>
+    <string name="channel_desc">Active background voice recognition and screen-off assistant notifications</string>
+    <string name="action_stop">Stop Listening</string>
+    <string name="auth_required_title">Authentication Required</string>
+    <string name="auth_required_msg">Please authenticate to continue.</string>
+</resources>

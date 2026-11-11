@@ -1,0 +1,6 @@
+{
+  "name": "MADU JARVIS AI",
+  "description": "Futuristic Sinhala & English voice AI assistant for Android with phone control, lock-screen assistance, and Gemini AI.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

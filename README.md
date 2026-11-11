@@ -66,22 +66,28 @@ A complete, production-grade native Android voice assistant built with **Kotlin*
    - **Method B (In-App Settings):** Open the app, navigate to the **Settings** tab, scroll to **Gemini API Configuration**, paste your key, and tap **Save Key**.
 
 ### 3. Build the APK
-- **From Android Studio**:
-  - Select **Build > Build Bundle(s) / APK(s) > Build APK(s)**.
-  - The generated APK will be at:
-    `app/build/outputs/apk/debug/app-debug.apk`
-- **From Command Line**:
+- **Important**: To install the APK directly on your Android phone, build the **Debug APK**:
   ```bash
-  gradle assembleDebug
+  # In terminal or Android Studio terminal:
+  ./gradlew assembleDebug
   ```
+  *(Or in Android Studio UI: make sure the active Build Variant in the bottom-left pane is **`debug`**, then click **Build > Build Bundle(s) / APK(s) > Build APK(s)**).*
+
+- **Location of the Generated APK**:
+  ```
+  app/build/outputs/apk/debug/app-debug.apk
+  ```
+  *(A pre-compiled 25 MB copy is also located in `.build-outputs/app-debug.apk`).*
+
+> **Note on Release Builds (`assembleRelease`)**: The `release` build variant is intended for signed Google Play production releases. It requires an upload keystore (`my-upload-key.jks`) with `STORE_PASSWORD` and `KEY_PASSWORD` environment variables. For local testing and direct device installation, **always use the Debug build variant**.
 
 ### 4. Install the APK on Your Android Device
-1. Enable **Developer Options** and **USB Debugging** on your Android device (Android 8.0 Oreo or later).
-2. Connect your device via USB or wireless debugging and run:
-   ```bash
-   adb install -r app/build/outputs/apk/debug/app-debug.apk
-   ```
-   *(Or transfer the `app-debug.apk` directly to your phone and tap to install).*
+- **Method 1 (Via USB ADB)**:
+  ```bash
+  adb install -r app/build/outputs/apk/debug/app-debug.apk
+  ```
+- **Method 2 (Direct Transfer)**:
+  Transfer `app-debug.apk` to your phone via USB cable, Google Drive, WhatsApp, or Telegram, then tap the file on your device to install. Make sure to allow "Install unknown apps" if prompted.
 
 ### 5. Enable Voice Assistant Permissions
 When first launching MADU JARVIS AI:
